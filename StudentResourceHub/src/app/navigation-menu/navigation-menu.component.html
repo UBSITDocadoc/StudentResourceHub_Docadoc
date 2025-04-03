@@ -1,49 +1,51 @@
 <nav class="nav-menu">
-    <div class="nav-container">
-      
-      <div class="menu-toggle" (click)="toggleMenu()">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      
-      <ul [class.active]="menuActive">
-        <li>
-          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            <i class="fas fa-home"></i> Home
-          </a>
-        </li>
-  
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">
-            <i class="fas fa-th-list"></i> Categories
-          </a>
-          <div class="dropdown-content">
-            <a routerLink="/categories/programming" routerLinkActive="active">
-              <i class="fas fa-code"></i> Programming
-            </a>
-            <a routerLink="/categories/design" routerLinkActive="active">
-              <i class="fas fa-paint-brush"></i> Design
-            </a>
-            <a routerLink="/categories/math" routerLinkActive="active">
-              <i class="fas fa-calculator"></i> Math
-            </a>
-          </div>
-        </li>
-  
-  
-        <li>
-          <a routerLink="/about" routerLinkActive="active">
-            <i class="fas fa-info-circle"></i> About
-          </a>
-        </li>
-  
-        <li>
-          <a routerLink="/add-resource" routerLinkActive="active" class="highlight">
-            <i class="fas fa-plus-circle"></i> Add Resource
-          </a>
-        </li>
-        
-      </ul>
+  <div class="nav-container">
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
-  </nav>
+
+    <ul [class.active]="menuActive">
+      <li>
+        <a 
+          routerLink="/" 
+          routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}">
+          <i class="fas fa-home"></i> Home
+        </a>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">
+          <i class="fas fa-th-list"></i> Categories
+        </a>
+        <div class="dropdown-content">
+          <a routerLink="/categories/programming" routerLinkActive="active">
+            <i class="fas fa-code"></i> Programming
+          </a>
+          <a routerLink="/categories/design" routerLinkActive="active">
+            <i class="fas fa-paint-brush"></i> Design
+          </a>
+          <a routerLink="/categories/math" routerLinkActive="active">
+            <i class="fas fa-calculator"></i> Math
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <a routerLink="/about" routerLinkActive="active">
+          <i class="fas fa-info-circle"></i> About
+        </a>
+      </li>
+
+      <!-- Updated add-resource link -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/add-resource" routerLinkActive="active">
+          <i class="fas fa-plus-circle"></i> Add Resource
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  

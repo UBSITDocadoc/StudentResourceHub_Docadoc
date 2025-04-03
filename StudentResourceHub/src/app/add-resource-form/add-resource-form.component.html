@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()" #resourceForm="ngForm">
+    <div>
+      <label for="title">Title:</label>
+      <input id="title" name="title" type="text" [(ngModel)]="resource.title" required>
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" [(ngModel)]="resource.description" required></textarea>
+    </div>
+    <div>
+      <label for="category">Category:</label>
+      <select id="category" name="category" [(ngModel)]="resource.category" required>
+        <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+      </select>
+    </div>
+    <div class="form-buttons">
+      <button type="submit" [disabled]="!isFormValid()">Submit</button>
+      <button type="button" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+  

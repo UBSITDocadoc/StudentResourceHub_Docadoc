@@ -7,12 +7,12 @@ import { AddResourceComponent } from './add-resource/add-resource.component';
 import { ProgrammingComponent } from './categories/programming/programming.component';
 import { DesignComponent } from './categories/design/design.component';
 import { MathComponent } from './categories/math/math.component';
-
+import { AddResourceFormComponent } from './add-resource-form/add-resource-form.component';
 const routes: Routes = [
   // Main Routes
   { path: '', component: HomeComponent },       
   { path: 'about', component: AboutComponent },   
-  { path: 'add-resource', component: AddResourceComponent }, 
+  { path: 'add-resource', component: AddResourceFormComponent },
 
   { 
     path: 'categories', 
