@@ -1,1 +1,9 @@
-<p>resource-list works!</p>
+<div class="resource-list">
+    <div class="resource-card" *ngFor="let resource of resources">
+      <h2 class="resource-title">{{ resource.title }}</h2>
+      <p class="resource-description">{{ resource.description }}</p>
+      <span class="resource-category">{{ resource.category }}</span>
+      <button class="view-details-btn" (click)="viewDetails(resource)">View Details</button>
+    </div>
+  </div>
+  
