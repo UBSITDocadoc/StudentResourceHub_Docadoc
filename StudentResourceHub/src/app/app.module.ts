@@ -16,6 +16,7 @@ import { ProgrammingComponent } from './categories/programming/programming.compo
 import { DesignComponent } from './categories/design/design.component';
 import { MathComponent } from './categories/math/math.component';
 import { ResourceListComponent } from './resource-list/resource-list.component';
+import { ResourceDetailsComponent } from './resource-details/resource-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -38,7 +39,8 @@ const routes: Routes = [
     ProgrammingComponent,
     DesignComponent,
     MathComponent,
-    ResourceListComponent
+    ResourceListComponent,
+    ResourceDetailsComponent
   ],
   imports: [
     BrowserModule,

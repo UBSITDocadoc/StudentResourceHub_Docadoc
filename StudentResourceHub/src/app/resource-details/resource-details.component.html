@@ -1,0 +1,10 @@
+<div class="resource-details">
+    <h1 class="resource-title">{{ resource.title }}</h1>
+    <p class="resource-full-description">{{ resource.description }}</p>
+    <p class="resource-category">Category: <span>{{ resource.category }}</span></p>
+    <p class="resource-url">URL: <a [href]="resource.url" target="_blank" rel="noopener">{{ resource.url }}</a></p>
+    <p class="resource-author">Author: {{ resource.author }}</p>
+    <p class="publication-date">Published on: {{ resource.publicationDate | date:'mediumDate' }}</p>
+    <button class="back-btn" (click)="goBack()">Back to List</button>
+  </div>
+  
