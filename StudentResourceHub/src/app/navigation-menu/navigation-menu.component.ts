@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './navigation-menu.component.css'
 })
 export class NavigationMenuComponent {
+  menuActive = false;
 
+  toggleMenu() {
+    this.menuActive = !this.menuActive;
+  }
 }

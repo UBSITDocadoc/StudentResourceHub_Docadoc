@@ -10,9 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AboutComponent } from './about/about.component';
 import { AddResourceComponent } from './add-resource/add-resource.component';
-import { ProgrammingComponent } from './Categories/programming/programming.component';
-import { DesignComponent } from './Categories/design/design.component';
-import { MathComponent } from './Categories/math/math.component';
+import { ProgrammingComponent } from './categories/programming/programming.component';
+import { DesignComponent } from './categories/design/design.component';
+import { MathComponent } from './categories/math/math.component';
 
 @NgModule({
   declarations: [
