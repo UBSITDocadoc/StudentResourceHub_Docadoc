@@ -1,0 +1,68 @@
+.resource-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .resource-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .badge-design {
+    background-color: #e91e63;
+  }
+  
+  .btn-view {
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-view:hover {
+    background-color: #00796b;
+  }
+  
