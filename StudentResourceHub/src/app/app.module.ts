@@ -26,7 +26,12 @@ const routes: Routes = [
   { path: 'add-resource', component: AddResourceFormComponent },
   { path: 'resources', component: ResourceListComponent },
   { path: 'resources/:id', component: ResourceDetailsComponent },
-  { path: 'category/:category', component: ResourceCategoryComponent },
+  { path: 'categories', component: CategoriesComponent, children: [
+      { path: 'programming', component: ProgrammingComponent },
+      { path: 'design', component: DesignComponent },
+      { path: 'math', component: MathComponent },
+      { path: '', redirectTo: 'programming', pathMatch: 'full' }
+    ] },
   { path: '**', redirectTo: '' }
 ];
 
@@ -51,7 +56,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    RouterModule.forRoot(routes),
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule

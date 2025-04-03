@@ -8,19 +8,10 @@
       <textarea id="description" name="description" [(ngModel)]="resource.description" required></textarea>
     </div>
     <div>
-      <label for="url">URL:</label>
-      <input id="url" name="url" type="text" [(ngModel)]="resource.url" required>
-    </div>
-    <div>
       <label for="category">Category:</label>
       <select id="category" name="category" [(ngModel)]="resource.category" required>
-        <option value="">Select Category</option>
         <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
       </select>
-    </div>
-    <div>
-      <label for="author">Author:</label>
-      <input id="author" name="author" type="text" [(ngModel)]="resource.author" required>
     </div>
     <div class="form-buttons">
       <button type="submit" [disabled]="!isFormValid()">Submit</button>

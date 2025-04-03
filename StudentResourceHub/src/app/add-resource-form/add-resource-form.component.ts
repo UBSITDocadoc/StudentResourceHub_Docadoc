@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ResourceService } from '../resource.service';
+import { Resource } from '../models/resource';
 @Component({
   selector: 'app-add-resource-form',
   standalone: false,
@@ -7,31 +9,34 @@ import { Router } from '@angular/router';
   styleUrl: './add-resource-form.component.css'
 })
 export class AddResourceFormComponent {
-  resource = {
+  resource: Partial<Resource> = {
     title: '',
     description: '',
-    url: '',
-    category: '',
-    author: ''
+    category: 'Programming'
   };
   categories: string[] = ['Programming', 'Design', 'Math'];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private resourceService: ResourceService) {}
 
   onSubmit(): void {
-    console.log('Resource submitted:', this.resource);
-    this.router.navigate(['/resources']);
+    if (this.isFormValid()) {
+      // Add the new resource using the service
+      this.resourceService.addResource(this.resource as Resource);
+      
+      // Ensure category has a value, then navigate.
+      const category = (this.resource.category || 'Programming').toLowerCase();
+      console.log('Resource category for navigation:', category);
+      
+      this.router.navigate(['/categories', category]);
+    }
   }
+  
 
   onCancel(): void {
-    this.router.navigate(['/resources']);
+    this.router.navigate(['/categories']);
   }
 
   isFormValid(): boolean {
-    return this.resource.title !== '' &&
-           this.resource.description !== '' &&
-           this.resource.url !== '' &&
-           this.resource.category !== '' &&
-           this.resource.author !== '';
+    return !!this.resource.title && !!this.resource.description && !!this.resource.category;
   }
 }
