@@ -1,5 +1,5 @@
 {
-  "name": "studentresource",
+  "name": "student-resource-hub",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:studentresource": "node dist/studentresource/server/server.mjs"
+    "serve:ssr:StudentResourceHub": "node dist/student-resource-hub/server/server.mjs"
   },
   "private": true,
   "dependencies": {
