@@ -37,6 +37,8 @@ export class AddResourceFormComponent {
   }
 
   isFormValid(): boolean {
-    return !!this.resource.title && !!this.resource.description && !!this.resource.category;
+    return !!this.resource.title &&
+           !!this.resource.description &&
+           !!this.resource.category;
   }
 }
