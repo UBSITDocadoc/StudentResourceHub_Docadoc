@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +15,14 @@ import { AddResourceComponent } from './add-resource/add-resource.component';
 import { ProgrammingComponent } from './categories/programming/programming.component';
 import { DesignComponent } from './categories/design/design.component';
 import { MathComponent } from './categories/math/math.component';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'add-resource', component: AddResourceComponent },
+
+  { path: '**', redirectTo: '' }
+];
 
 @NgModule({
   declarations: [
@@ -30,7 +40,11 @@ import { MathComponent } from './categories/math/math.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
