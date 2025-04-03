@@ -1,0 +1,12 @@
+<div class="resource-category">
+    <h1>{{ category | titlecase }} Resources</h1>
+    <p>{{ categoryDescription }}</p>
+    <div class="resource-list">
+      <div class="resource-item" *ngFor="let resource of filteredResources">
+        <h2>{{ resource.title }}</h2>
+        <p>{{ resource.description }}</p>
+        <button routerLink="/resources/{{ resource.id }}">View Details</button>
+      </div>
+    </div>
+  </div>
+  

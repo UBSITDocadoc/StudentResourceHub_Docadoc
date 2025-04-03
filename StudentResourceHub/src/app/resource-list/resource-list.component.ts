@@ -14,9 +14,9 @@ interface Resource {
 })
 export class ResourceListComponent implements OnInit {
   resources: Resource[] = [
-    { id: 1, title: 'Resource One', description: 'This is a brief description about Resource One.', category: 'Programming' },
-    { id: 2, title: 'Resource Two', description: 'This is a brief description about Resource Two.', category: 'Design' },
-    { id: 3, title: 'Resource Three', description: 'This is a brief description about Resource Three.', category: 'Math' },
+    { id: 1, title: 'Java', description: 'Java is an object-oriented programming language known for its portability, allowing applications to run on any device with a Java Virtual Machine (JVM).', category: 'Programming' },
+    { id: 2, title: 'Html', description: 'HTML (HyperText Markup Language) is the standard markup language used to create and structure content on the web. It defines the elements like headings, paragraphs, links, images, and other components to display webpages in browsers.', category: 'Design' },
+    { id: 3, title: 'Fraction', description: 'Fractions are mathematical expressions that represent parts of a whole, consisting of a numerator (top number) and a denominator (bottom number).', category: 'Math' },
   ];
 
   constructor() { }

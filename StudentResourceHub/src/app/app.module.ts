@@ -17,12 +17,16 @@ import { DesignComponent } from './categories/design/design.component';
 import { MathComponent } from './categories/math/math.component';
 import { ResourceListComponent } from './resource-list/resource-list.component';
 import { ResourceDetailsComponent } from './resource-details/resource-details.component';
+import { ResourceCategoryComponent } from './resource-category/resource-category.component';
+import { AddResourceFormComponent } from './add-resource-form/add-resource-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'add-resource', component: AddResourceComponent },
-
+  { path: 'add-resource', component: AddResourceFormComponent },
+  { path: 'resources', component: ResourceListComponent },
+  { path: 'resources/:id', component: ResourceDetailsComponent },
+  { path: 'category/:category', component: ResourceCategoryComponent },
   { path: '**', redirectTo: '' }
 ];
 
@@ -40,7 +44,9 @@ const routes: Routes = [
     DesignComponent,
     MathComponent,
     ResourceListComponent,
-    ResourceDetailsComponent
+    ResourceDetailsComponent,
+    ResourceCategoryComponent,
+    AddResourceFormComponent
   ],
   imports: [
     BrowserModule,
