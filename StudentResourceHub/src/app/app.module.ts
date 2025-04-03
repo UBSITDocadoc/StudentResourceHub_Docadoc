@@ -15,6 +15,8 @@ import { AddResourceComponent } from './add-resource/add-resource.component';
 import { ProgrammingComponent } from './categories/programming/programming.component';
 import { DesignComponent } from './categories/design/design.component';
 import { MathComponent } from './categories/math/math.component';
+import { ResourceListComponent } from './resource-list/resource-list.component';
+import { ResourceDetailsComponent } from './resource-details/resource-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -36,7 +38,9 @@ const routes: Routes = [
     AddResourceComponent,
     ProgrammingComponent,
     DesignComponent,
-    MathComponent
+    MathComponent,
+    ResourceListComponent,
+    ResourceDetailsComponent
   ],
   imports: [
     BrowserModule,

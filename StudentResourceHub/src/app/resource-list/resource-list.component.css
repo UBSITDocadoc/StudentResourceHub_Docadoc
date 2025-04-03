@@ -1,0 +1,56 @@
+.resource-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .resource-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .resource-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .resource-description {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #666;
+  }
+  
+  .resource-category {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .view-details-btn {
+    align-self: flex-start;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-details-btn:hover {
+    background-color: #45a049;
+  }
+  

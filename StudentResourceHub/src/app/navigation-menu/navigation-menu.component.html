@@ -1,5 +1,6 @@
 <nav class="nav-menu">
     <div class="nav-container">
+      
       <div class="menu-toggle" (click)="toggleMenu()">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -27,20 +28,9 @@
             <a routerLink="/categories/math" routerLinkActive="active">
               <i class="fas fa-calculator"></i> Math
             </a>
-            <a routerLink="/categories/science" routerLinkActive="active">
-              <i class="fas fa-flask"></i> Science
-            </a>
-            <a routerLink="/categories/languages" routerLinkActive="active">
-              <i class="fas fa-language"></i> Languages
-            </a>
           </div>
         </li>
   
-        <li>
-          <a routerLink="/resources" routerLinkActive="active">
-            <i class="fas fa-book"></i> All Resources
-          </a>
-        </li>
   
         <li>
           <a routerLink="/about" routerLinkActive="active">
@@ -54,18 +44,6 @@
           </a>
         </li>
         
-        <li>
-          <a routerLink="/contact" routerLinkActive="active">
-            <i class="fas fa-envelope"></i> Contact
-          </a>
-        </li>
       </ul>
-      
-      <div class="search-container">
-        <input type="text" placeholder="Search resources..." class="search-input">
-        <button class="search-button">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
     </div>
   </nav>
