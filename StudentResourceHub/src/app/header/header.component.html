@@ -1,1 +1,15 @@
-<p>header works!</p>
+<header class="header">
+    <div class="header-content">
+      <div class="logo" *ngIf="showLogo">
+        <img src="assets/logo.png" alt="Student Resource Hub Logo">
+      </div>
+      <div class="title">
+        <h1>Student Resource Hub</h1>
+        <p class="tagline">Your gateway to educational resources</p>
+      </div>
+      <div class="user-actions">
+        <button class="btn-login">Login</button>
+        <button class="btn-signup">Sign Up</button>
+      </div>
+    </div>
+  </header>
