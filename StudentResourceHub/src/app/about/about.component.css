@@ -1,0 +1,61 @@
+.about-page {
+    padding: 40px 20px;
+    background: #f4f4f4;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-container h1 {
+    font-size: 2.5rem;
+    color: #3f51b5;
+    margin-bottom: 1rem;
+  }
+  
+  .about-container p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-block {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .about-block h3 {
+    font-size: 1.8rem;
+    color: #009688;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-block p {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .team-section h2 {
+    font-size: 2rem;
+    color: #e91e63;
+    margin-bottom: 0.8rem;
+  }
+  
+  .team-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
