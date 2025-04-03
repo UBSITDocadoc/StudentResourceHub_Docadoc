@@ -1,7 +1,29 @@
-<div class="resource-list">
+<div class="resource-cards">
     <div *ngFor="let resource of resources" class="resource-card">
-      <h2>{{ resource.title }}</h2>
-      <p>{{ resource.description }}</p>
+      <div class="card">
+        <div class="card-body">
+
+          <h3 class="card-title">{{ resource.title }}</h3>
+          
+
+          <p class="card-text">{{ resource.description }}</p>
+          
+
+          <span class="badge" [ngClass]="{
+              'badge-programming': resource.category.toLowerCase() === 'programming',
+              'badge-design': resource.category.toLowerCase() === 'design',
+              'badge-math': resource.category.toLowerCase() === 'math'
+            }">{{ resource.category }}</span>
+          
+
+          <button class="btn-view" (click)="viewDetails(resource)">View Details</button>
+        </div>
+      </div>
     </div>
   </div>
+  
+
+  <ng-template #noData>
+    <p>No resources available in this category.</p>
+  </ng-template>
   
